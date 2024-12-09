@@ -3,6 +3,13 @@
   flex-direction: column;
   height: 100%;
 
+  -ms-overflow-style: none; /* 隱藏 IE 和 Edge 的滾動條 */
+  scrollbar-width: none; /* 隱藏 Firefox 的滾動條 */
+
+  &::-webkit-scrollbar {
+    display: none; /* 隱藏 Chrome、Safari 和 Edge 的滾動條 */
+  }
+
   hr {
     border: none;
     height: 2px;
@@ -21,7 +28,7 @@
   .list {
     display: flex;
     flex-direction: column;
-    overflow: scroll;
+    overflow: auto;
   }
 
   a {

@@ -10,7 +10,7 @@ const Homepage = () => {
     <div className="homepage">
       <img src="/orbital.png" alt="" className="orbital" />
       <div className="left">
-        <h1>LAMA AI</h1>
+        <h1>Codeflow AI</h1>
         <h2>Supercharge your creativity and productivity</h2>
         <h3>
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Placeat sint
@@ -38,22 +38,22 @@ const Homepage = () => {
             <TypeAnimation
               sequence={[
                 // Same substring at the start will only be typed out once, initially
-                "Human:We produce food for Mice",
+                "Human:自從用了codeflow AI，我們的生產力提高了很多",
                 2000,
                 () => {
                   setTypingStatus("bot");
                 },
-                "Bot:We produce food for Hamsters",
+                "Bot:Codeflow AI 幫助我學習程式邏輯",
                 2000,
                 () => {
                   setTypingStatus("human2");
                 },
-                "Human2:We produce food for Guinea Pigs",
+                "Human2:Codeflow AI is a great tool for learning programming",
                 2000,
                 () => {
                   setTypingStatus("bot");
                 },
-                "Bot:We produce food for Chinchillas",
+                "Bot:使用Codeflow進行教學，我們的學生學習更快",
                 2000,
                 () => {
                   setTypingStatus("human1");

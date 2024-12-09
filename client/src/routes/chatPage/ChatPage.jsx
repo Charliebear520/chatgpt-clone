@@ -28,8 +28,8 @@ const ChatPage = () => {
             : error
             ? "Something went wrong!"
             : data?.history?.map((message, i) => (
-                <>
-                  {message.img && (
+                <div key={message.id || i}>
+                  {message.img && message.img.trim() !== "" && (
                     <IKImage
                       urlEndpoint={import.meta.env.VITE_IMAGE_KIT_ENDPOINT}
                       path={message.img}
@@ -44,14 +44,14 @@ const ChatPage = () => {
                     className={
                       message.role === "user" ? "message user" : "message"
                     }
-                    key={i}
+                    // key={i}
                   >
                     <Markdown>{message.parts[0].text}</Markdown>
                   </div>
-                </>
+                </div>
               ))}
 
-          {data && <NewPrompt data={data}/>}
+          {data && <NewPrompt data={data} />}
         </div>
       </div>
     </div>
